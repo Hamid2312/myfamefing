@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/myfamefing/static/css/main.a95858b6.css",
+    "main.css": "/myfamefing/static/css/main.c5c37373.css",
     "main.js": "/myfamefing/static/js/main.b0714748.js",
     "static/js/453.a074a449.chunk.js": "/myfamefing/static/js/453.a074a449.chunk.js",
     "static/media/31-website.png": "/myfamefing/static/media/31-website.6fe31078660ca9c9d7c8.png",
@@ -61,12 +61,12 @@
     "static/media/training14.jpg": "/myfamefing/static/media/training14.285a8c7f88e56953f243.jpg",
     "static/media/snackvedio.png": "/myfamefing/static/media/snackvedio.9bc73404b02460f9621a.png",
     "index.html": "/myfamefing/index.html",
-    "main.a95858b6.css.map": "/myfamefing/static/css/main.a95858b6.css.map",
+    "main.c5c37373.css.map": "/myfamefing/static/css/main.c5c37373.css.map",
     "main.b0714748.js.map": "/myfamefing/static/js/main.b0714748.js.map",
     "453.a074a449.chunk.js.map": "/myfamefing/static/js/453.a074a449.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a95858b6.css",
+    "static/css/main.c5c37373.css",
     "static/js/main.b0714748.js"
   ]
 }
