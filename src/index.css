@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* index.css or App.css */
+html, body {
+  overflow-x: hidden;
+}
+
 /* Apply transparent black background to the body with increased opacity */
 body {
     background-color: rgba(0, 0, 0, 0.9); /* Black with 70% opacity */
