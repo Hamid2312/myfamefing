@@ -1,0 +1,194 @@
+import React, { useState } from "react";
+
+const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    phoneNumber: "",
+    email: "",
+    service: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission here, e.g., send the form data to the server
+    console.log(formData);
+  };
+
+  return (
+    <form
+      onSubmit={handleSubmit}
+      method="post"
+      action="/contact-us/"
+      className="wpforms-validate wpforms-form wpforms-ajax-form"
+    >
+      <div className="wpforms-field-container">
+        <div className="wpforms-field wpforms-field-name">
+          <fieldset>
+            <legend className="wpforms-field-label">Name</legend>
+            <div className="wpforms-field-row wpforms-field-medium">
+              <div className="wpforms-field-row-block wpforms-first wpforms-one-half">
+                <input
+                  type="text"
+                  id="first-name"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  className="wpforms-field-name-first"
+                  required
+                />
+                <label htmlFor="first-name" className="wpforms-field-sublabel after">
+                  First
+                </label>
+              </div>
+              <div className="wpforms-field-row-block wpforms-one-half">
+                <input
+                  type="text"
+                  id="last-name"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  className="wpforms-field-name-last"
+                  required
+                />
+                <label htmlFor="last-name" className="wpforms-field-sublabel after">
+                  Last
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div className="wpforms-field wpforms-field-number">
+          <label className="wpforms-field-label" htmlFor="phone-number">
+            Phone Number
+          </label>
+          <input
+            type="number"
+            id="phone-number"
+            name="phoneNumber"
+            value={formData.phoneNumber}
+            onChange={handleChange}
+            className="wpforms-field-medium"
+            required
+          />
+        </div>
+
+        <div className="wpforms-field wpforms-field-email">
+          <label className="wpforms-field-label" htmlFor="email">
+            Email Address
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            className="wpforms-field-medium"
+            required
+          />
+        </div>
+
+        <div className="wpforms-field wpforms-field-radio wpforms-list-2-columns">
+          <fieldset>
+            <legend className="wpforms-field-label">Services</legend>
+            <ul id="services">
+              <li>
+                <input
+                  type="radio"
+                  id="web-development"
+                  name="service"
+                  value="Web development"
+                  onChange={handleChange}
+                  required
+                />
+                <label htmlFor="web-development">Web development</label>
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  id="ios-development"
+                  name="service"
+                  value="IOS Development"
+                  onChange={handleChange}
+                />
+                <label htmlFor="ios-development">IOS Development</label>
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  id="digital-marketing"
+                  name="service"
+                  value="Digital Marketing"
+                  onChange={handleChange}
+                />
+                <label htmlFor="digital-marketing">Digital Marketing</label>
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  id="graphic-designing"
+                  name="service"
+                  value="Graphic Designing"
+                  onChange={handleChange}
+                />
+                <label htmlFor="graphic-designing">Graphic Designing</label>
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  id="video-editing"
+                  name="service"
+                  value="Video Editing"
+                  onChange={handleChange}
+                />
+                <label htmlFor="video-editing">Video Editing</label>
+              </li>
+              <li>
+                <input
+                  type="radio"
+                  id="bpo"
+                  name="service"
+                  value="BPO"
+                  onChange={handleChange}
+                />
+                <label htmlFor="bpo">BPO</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+
+        <div className="wpforms-field wpforms-field-textarea">
+          <label className="wpforms-field-label" htmlFor="message">
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            className="wpforms-field-medium"
+            required
+          ></textarea>
+        </div>
+      </div>
+
+      <div className="wpforms-submit-container">
+        <button type="submit" className="wpforms-submit">
+          Submit
+        </button>
+      </div>
+    </form>
+  );
+};
+
+export default ContactForm;

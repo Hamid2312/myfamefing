@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Apply transparent black background to the body with increased opacity */
+body {
+    background-color: rgba(0, 0, 0, 0.9); /* Black with 70% opacity */
+  }
+  
+  /* For specific elements, you can add this class */
+  .bg-transparent-black {
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black with 70% opacity */
+  }
+  
